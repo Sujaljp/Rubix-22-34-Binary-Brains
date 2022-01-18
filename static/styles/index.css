@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,100,400;0,100,500;1,87.3,437&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    transition: 0.4s;
+}
+
+:root {
+    --color-light : #f3f3f3 ;
+    --color-dark : #0a0a0a ;
+    --color-accent : #054495 ;
+
+    --font-normal : 400 ;
+    --font-bold : 800 ;
+}
+
+body {
+    max-width: 100%;
+}
+
+hr {
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 4%;
+    color: var(--color-dark);
+}
+
+.header {
+    max-width: 100%;
+    display: flex;
+    background-color: var(--color-dark);
+    align-items: center;
+}
+
+.logo {
+    color: var(--color-light);
+    font-size: x-large;
+    max-width: 5%;
+    margin-left: 4%;
+    font-weight: var(--font-bold);
+}
+
+.navbar {
+    margin-left: 8%;
+    width: 100%;
+}
+
+.navitem {
+    font-size: larger;
+    margin-left: 6%;
+    color: white;
+    text-decoration: none;
+}
+
+.navitem:hover {
+    color: var(--color-accent);
+}
+
+.userAuth {
+    width: 50%;
+    margin-right: 2%;
+    margin-left: 30%;
+}
+
+.button_userAuth {
+    margin-left: 5%;
+    font-size: larger;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    border-radius: 0.4rem;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--color-accent);
+}
+
+.button_userAuth:hover {
+    background-color: var(--color-accent);
+    cursor: pointer;
+}
+
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.mainContainer {
+    width: 100%;
+    height: 100vh;    
+}
+
+.intro {
+    margin-top: 0%;
+    height: 37rem;
+    background-image:  linear-gradient(rgba(190, 190, 190, 0.781), rgba(20, 20, 20, 0.096)), url("/Static/Images/food\ background.PNG");
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    clip-path: ellipse(100% 100% at 10% 20%);
+    clip-path: ellipse(88% 62% at 39% 39%);
+ 
+}
+
+.intro-slogan {
+    font-size: 3rem;
+    padding-top: 5%;
+    padding-left: 5%;
+    color: var(--color-dark);
+}
+
+.intro-slogan strong {
+    font-size: 6rem;
+    font-weight: var(--font-bold);
+    color: black;
+}
+
+.getStarted {
+    float: right;
+    margin-top: 4%;
+    margin-right: 15%;
+    font-size: 3rem;
+    color: var(--color-light);
+    padding: 1rem 2rem;
+    background-color: rgb(77, 28, 16);
+    border-radius: 0.4rem;
+}
+.getStarted:hover {
+    cursor: pointer;
+    background-color: rgb(44, 16, 9);
+}
+
+
+.foodwastage_heading {
+    font-size: 5rem;
+    margin-bottom: 6%;
+}
+
+.info_food_wastage {
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 6%;
+}
+
+.info_food_wastage p {
+    margin-top: 4%;
+    font-size: large;
+}
+
+.foodwaste_image_1 {
+    height: 18rem;
+    border-radius: 0.4rem;
+    border: none;
+    float:right;
+    margin-top: 6%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    
+}
+
+.foodwaste_image_2 {
+    height: 18rem;
+    border-radius: 0.4rem;
+    border: none;
+    float:left;
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+.solution {
+    width: 100%;
+    height: 40rem;
+    margin-top: 4%;
+}
+
+.ourSolution {
+    font-size: 5.6rem;
+    margin-left: 6%;
+    margin-top: 8%;
+}
+
+.solutions {
+    margin-right: 6%;
+    margin-left: 6%;
+    margin-top: 2%;
+    margin-top: 2%;
+}
+
+.solution_image_1 {
+    height: 12rem;
+    border-radius: 0.4rem;
+    float:right;
+    margin-left: 4%;
+}
+
+.solution_image_2 {
+    height: 12rem;
+    border-radius: 0.4rem;
+    float: left;
+    margin-right: 4%;
+
+}
+
+.solution_descr {
+    font-size: large;
+}
+
+.footer {
+    background-color: var(--color-dark);
+    width: 100%;
+    margin-top: 130rem;
+    height: 16rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.team {
+    color: var(--color-light);
+}
+
+.meetTheTeam {
+    color: var(--color-light);
+    font-size: xx-large;
+
+}
+
+.names {
+    display: flex;
+    margin-top: 2%;
+    width: 169%;
+    margin-left: -38%;
+}
+
+.name {
+    font-size: larger;
+    margin-left: 8%;
+}
+
+.github {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+}

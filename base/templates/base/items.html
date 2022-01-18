@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<style>
+    .items-container{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+</style>
+<div class="items-container">
+
+<div>
+    <h1>Item List of All for now</h1>
+    <hr>
+{% for item in items %}
+    <div>
+        <h1>{{item.name}}</h1>
+        --{{item.expirydate}}
+        <a href="{% url 'delete-item' item.id %}"><strong>Delete</strong></a>
+    </div>
+{% endfor %}
+</div>
+<div>
+    <h1>Activity</h1>
+    <hr>
+    <a href=""><h3>Create</h3></a>
+    <form method="post" action="">
+    {% csrf_token %}
+        <label for="itemname">Item Name</label>
+        <input type="text" name="itemname" placeholder="Your Items Name" >
+        <br>
+        <label for="expirydate">Expiry date:</label>
+        <input type="date" id="start" name="expirydate" min="2022-01-01">   
+        <input type="submit" value="Add">
+    </form>
+    
+</div>
+    
+</div>
+
+{% endblock content %}

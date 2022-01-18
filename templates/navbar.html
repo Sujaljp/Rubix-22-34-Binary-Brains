@@ -1,0 +1,22 @@
+<header class="header">
+
+    <div class="logo">Food ResQ</div>
+
+    <nav class="navbar">
+        <a href="{% url 'user-items' %}" class="navitem">Home</a>
+        <a href="#" class="navitem">Recipies</a>
+        <a href="#" class="navitem">Shopping List</a>
+        <a href="#" class="navitem">About us</a>
+    </nav>
+    {% if request.user.is_authenticated %}
+    <div class="userAuth">
+        <a href="{% url 'logoutuser' %}"><button class="button_userAuth" action="">Log Out</button></a>
+        
+    </div>
+    {% else %}
+    <div class="userAuth">
+        <a href="{% url 'loginuser' %}"><button class="button_userAuth" action="">Log In</button></a>
+        <a href="{% url 'signupuser' %}"><button class="button_userAuth" action="">Sign In</button></a>
+    </div>
+    {% endif %}
+</header>
