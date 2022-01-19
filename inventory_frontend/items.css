@@ -19,6 +19,7 @@
     color:darkcyan;
 }
 
+
 .item_container {
     margin-top: 4%;
 }
@@ -29,7 +30,8 @@
 }
 
 .item:hover {
-    background-color: whitesmoke;
+    background-color:whitesmoke;
+    
 }
 
 .top {
@@ -45,6 +47,16 @@
     font-size: 2rem;
     margin-top: 2%;
 }
+@media (max-width:800px)
+{
+    .inventory_heading {
+        font-size: 1.7rem;
+    }
+    .item_heading {
+        font-size:1rem;
+    }
+
+}
 
 .delete_item_btn {
     margin-right: 10%;
@@ -52,6 +64,14 @@
     border-radius: 50%;
     margin-bottom: -6%;
 }
+@media (max-width:750px)
+{
+    .delete_item_btn{
+        padding:0.4rem;
+    }
+}
+
+
 .delete_item_btn:hover {
     background-color: rgba(209, 18, 18, 0.952);
     cursor: pointer;
@@ -126,6 +146,38 @@
     padding: 0.6rem 3rem;
     margin-top: 8%;
     margin-left: 30%;
+}
+@media (max-width:750px)
+{
+    .item_exp_date {
+        font-size: x-small;
+    }
+    
+    .itemName {
+        font-size: 1rem;
+    }
+    .itemname_input {
+        font-size:medium;
+    }
+    .expiryDate {
+        font-size: 1rem;   
+    }
+    .expiry_date_input {
+        font-size:medium;
+    }
+    .submit_btn {
+        font-size:small;
+        padding:0.3rem 2rem;
+    }
+}
+    @media (max-width:850px){
+    .addItem_heading {
+        font-size: 1.7rem;
+    }
+
+
+
+    
 }
 
 .submit_btn:hover {
