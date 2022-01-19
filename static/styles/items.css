@@ -1,0 +1,135 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+
+.inventory {
+
+    height: 90vh;
+    width: 60%;
+    /* border-right: 1px solid grey; */
+    height: max-content;
+}
+
+.inventory_heading {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-left: 1%;
+    color:darkcyan;
+}
+
+.item_container {
+    margin-top: 4%;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+.item:hover {
+    background-color:     #d2d2d2;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* background-color: greenyellow; */
+    justify-content:space-between;
+}
+
+.item_heading {
+    margin-left: 4%;
+    font-size: 2rem;
+    margin-top: 2%;
+}
+
+.delete_item_btn {
+    margin-right: 10%;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: -6%;
+}
+.delete_item_btn:hover {
+    background-color: rgba(209, 18, 18, 0.952);
+    cursor: pointer;
+}
+
+.bottom {
+    margin-bottom: 2%;
+}
+
+.item_exp_date {
+    font-size: small;
+    font-weight: 600;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+.addItems {
+
+    width: 40%;
+   /* border-left: 1px solid grey; */
+}
+
+.addItem_heading {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-left: 2%;
+    color:darkcyan;
+    position: fixed;
+    max-width: 100%;
+}
+
+.addItem_form {
+    width: 100%;
+    margin-top: 6%;
+}
+
+.form {
+    margin: 2% 6%;
+}
+
+.itemName {
+    font-size: 2rem;
+}
+
+.itemname_input {
+    margin-top: 2%;
+    margin-bottom: 4%;
+    font-size: large;
+    margin-left: 4%;
+    padding: 0.3rem 1rem;
+    width: 90%;
+}
+
+.expiryDate {
+    font-size: 2rem;   
+}
+
+.expiry_date_input {
+    margin-top: 2%;
+    margin-bottom: 4%;
+    font-size: large;
+    margin-left: 4%;
+    padding: 0.3rem 1rem;
+    width: 90%; 
+}
+
+.submit_btn {
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 3px green;
+    border-radius: 0.2rem;
+    font-size: large;
+    padding: 0.6rem 3rem;
+    margin-top: 8%;
+    margin-left: 30%;
+}
+
+.submit_btn:hover {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}

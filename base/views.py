@@ -1,15 +1,43 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from datetime import timedelta, date
+import datetime
+import smtplib
+import schedule
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from .models import Item
 
+def sendMail():
+    item = Item.objects.all()
+    today = datetime.date.today()
+    for items in item:
+        date= items.expirydate
+        dt = datetime.timedelta(-1)
+        nftdate = date+dt
+        if nftdate == today:
+            name = items.name
+            username = items.user.username
+            email = 'resqfood1@gmail.com'
+            recemail = items.user.email
+            password = 'Foodresq123'
+            note = 'Following item will go bad by today: '+ name
+            subject = 'ResQ your Items'
+            msg = f'From: Food ResQ\nTo:{username}\nSubject: {subject}\n\n{note}'
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+
+            server.starttls()
+            server.login(email, password)
+            
+            server.sendmail(email, recemail, msg)
+    print('Mail Sent to', recemail)
+
 
 # Create your views here.
 def home(request):
+    schedule.every().day.at("06:01").do(sendMail)
+    schedule.run_pending()
     return render(request, 'base/index.html')
 
 
@@ -55,12 +83,17 @@ def userItems(request):
             name = request.POST.get('itemname'),
             expirydate=request.POST.get('expirydate'),
         )
+        date= request.POST.get('expirydate')
+        year= int(date[0:4])
+        month= int(date[5:7])
+        day= int(date[8:])
+        first = datetime.date(year, month, day)
+        dt = datetime.timedelta(-1)
+        ntfdate = first+dt
+        print(ntfdate)
+        return redirect('user-items')
     items = user.item_set.all().order_by('expirydate')
-    for item in items:
-        date = item.expirydate
-        print(newdate)
-        
-    #date = item.expirydate.date()
+
     context={'items':items}
     return render(request, 'base/items.html' , context)
 
