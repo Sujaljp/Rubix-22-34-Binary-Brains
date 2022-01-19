@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Inventory</title>
+    <link rel="stylesheet" href="/CSS/global.css">
+    <link rel="stylesheet" href="/CSS/items.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="logo">Food ResQ</div>
+
+        <nav class="navbar">
+            <a href="#" class="navitem">Home</a>
+            <a href="#" class="navitem">Recipies</a>
+            <a href="#" class="navitem">Shopping List</a>
+            <a href="#" class="navitem">About us</a>
+
+        </nav>
+
+        <div class="userAuth">
+            <button class="button_userAuth" id="SignIn">SignIn</button>
+            <button class="button_userAuth" id="Sugnup">SignUp</button>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="inventory">
+            <lable class="inventory_heading">My Inventory</lable>
+
+            <div class="item_container">
+               
+                <div class="item">
+                    <div class="top">
+                        <lable class="item_heading">Lorem ipsum dolor sit.</lable>
+                        <img src="/Static/Images/delete icon medium.png" alt="" class="delete_item_btn">
+                    </div>
+                    <div class="bottom">
+                        <lable class="item_exp_date">Expiry Date : 20 Jan 2020</lable>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <div class="top">
+                        <lable class="item_heading">Lorem ipsum dolor sit.</lable>
+                        <img src="/Static/Images/delete icon medium.png" alt="" class="delete_item_btn">
+                    </div>
+                    <div class="bottom">
+                        <lable class="item_exp_date">Expiry Date : 20 Jan 2020</lable>
+                    </div>
+                </div>
+
+
+
+                <div class="item">
+                    <div class="top">
+                        <lable class="item_heading">Lorem ipsum dolor sit.</lable>
+                        <img src="/Static/Images/delete icon medium.png" alt="" class="delete_item_btn">
+                    </div>
+                    <div class="bottom">
+                        <lable class="item_exp_date">Expiry Date : 20 Jan 2020</lable>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <div class="top">
+                        <lable class="item_heading">Lorem ipsum dolor sit.</lable>
+                        <img src="/Static/Images/delete icon medium.png" alt="" class="delete_item_btn">
+                    </div>
+                    <div class="bottom">
+                        <lable class="item_exp_date">Expiry Date : 20 Jan 2020</lable>
+                    </div>
+                </div>
+
+
+
+                <div class="item">
+                    <div class="top">
+                        <lable class="item_heading">Lorem ipsum dolor sit.</lable>
+                        <img src="/Static/Images/delete icon medium.png" alt="" class="delete_item_btn">
+                    </div>
+                    <div class="bottom">
+                        <lable class="item_exp_date">Expiry Date : 20 Jan 2020</lable>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="addItems">
+            <lable class="addItem_heading">Add new Item</lable>
+            <br><br><br>
+           <div class="addItem_form">
+              <form class="form" method="post">
+                  <lable class="itemName">Item Name</lable>
+                  <br>
+                  <input type="text" id="item_name_input" placeholder="hello" class="itemname_input">
+                    <br>
+                    <lable class="expiryDate">Expiry Date</lable>
+                    <br>
+                    <input type="date" id="expiry_date_input" class="expiry_date_input">
+                    <br>
+                    <button class="submit_btn">Add to Inventory</button>
+                </form>
+           </div>
+
+        </div>
+    </main>
+
+
+</body>
+<script src="/JS/items.js"></script>
+
+</html>
