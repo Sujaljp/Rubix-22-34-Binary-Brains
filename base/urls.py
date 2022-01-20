@@ -8,6 +8,7 @@ urlpatterns = [
 
     path('items/', views.userItems, name="user-items"),
     path('delete/<str:pk>/', views.deleteItem, name="delete-item"),
+    path('recipes/', views.recipes, name="recipes"),
 
     path('signup/', views.signupuser, name='signupuser'),
     path('login/', views.loginuser, name='loginuser'),

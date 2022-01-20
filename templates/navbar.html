@@ -3,10 +3,10 @@
     <div class="logo">Food ResQ</div>
 
     <nav class="navbar">
-        <a href="{% url 'user-items' %}" class="navitem">Home</a>
-        <a href="#" class="navitem">Recipies</a>
-        <a href="#" class="navitem">Shopping List</a>
-        <a href="#" class="navitem">About us</a>
+        <a href="{% url 'user-items' %}" class="navitem">Inventory</a>
+        <a href="{% url 'recipes' %}" class="navitem">Recipies</a>
+        {% comment %} <a href="#" class="navitem">Items saved</a> {% endcomment %}
+        <a href="{% url 'home' %}" class="navitem">About us</a>
     </nav>
     {% if request.user.is_authenticated %}
     <div class="userAuth">

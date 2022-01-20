@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from .models import Item
+from django.db import IntegrityError
 
 def sendMail():
     item = Item.objects.all()
@@ -36,9 +37,16 @@ def sendMail():
 
 # Create your views here.
 def home(request):
+    #sendMail()
     schedule.every().day.at("06:01").do(sendMail)
     schedule.run_pending()
     return render(request, 'base/index.html')
+
+
+
+@login_required(login_url='/login')
+def recipes(request):
+    return render(request, 'base/recipes.html')
 
 
 

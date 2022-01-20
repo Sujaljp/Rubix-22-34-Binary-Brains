@@ -172,7 +172,7 @@ hr {
             font-weight: 600;
             margin-left: 2%;
             color:darkcyan;
-            position: static;
+            position: fixed;
             max-width: 100%;
         }
         
@@ -231,9 +231,9 @@ hr {
 <body>
     <main class="main">
         <div class="inventory">
-            <lable class="inventory_heading">My Inventory</lable>
+            <lable class="inventory_heading">Recipes for your inventory</lable>
 
-            <div class="item_container">
+            <!-- <div class="item_container">
                 {% for item in items %}
                 <div class="item">
                     <div class="top">
@@ -245,10 +245,10 @@ hr {
                     </div>
                 </div>
                 {% endfor %}
-            </div>
+            </div> -->
         </div>
 
-
+<!-- 
         <div class="addItems">
             <lable class="addItem_heading">Add new Item</lable>
             <br><br><br>
@@ -267,57 +267,9 @@ hr {
                 </form>
            </div>
 
-        </div>
+        </div> -->
     </main>
 
 
 </body>
 </html>
-
-
-
-
-
-
-
-{% comment %} {% extends 'main.html' %}
-
-{% block content %}
-<style>
-    .items-container{
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-    }
-</>
-<div class="items-container">
-
-<div>
-    <h1>Item List of All for now</h1>
-    <hr>
-{% for item in items %}
-    <div>
-        <h1>{{item.name}}</h1>
-        --{{item.expirydate}}
-        <a href="{% url 'delete-item' item.id %}"><strong>Delete</strong></a>
-    </div>
-{% endfor %}
-</div>
-<div>
-    <h1>Activity</h1>
-    <hr>
-    <a href=""><h3>Create</h3></a>
-    <form method="post" action="">
-    {% csrf_token %}
-        <label for="itemname">Item Name</label>
-        <input type="text" name="itemname" placeholder="Your Items Name" >
-        <br>
-        <label for="expirydate">Expiry date:</label>
-        <input type="date" id="start" name="expirydate" min="2022-01-01">   
-        <input type="submit" value="Add">
-    </form>
-    
-</div>
-    
-</div>
-
-{% endblock content %} {% endcomment %}
