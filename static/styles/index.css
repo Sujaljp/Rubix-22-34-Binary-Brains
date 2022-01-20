@@ -37,11 +37,14 @@ hr {
 }
 
 .logo {
-    color: var(--color-light);
+    color: var(--color-dark);
     font-size: x-large;
-    max-width: 5%;
-    margin-left: 4%;
+    padding:10px;
+    max-width:20%;
+    margin-left:4%;
     font-weight: var(--font-bold);
+    background-color: greenyellow;
+    
 }
 
 .navbar {

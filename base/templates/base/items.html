@@ -48,13 +48,15 @@ hr {
 }
 
 .logo {
-    color: var(--color-light);
+    color: var(--color-dark);
     font-size: x-large;
-    max-width: 5%;
-    margin-left: 4%;
+    padding:10px;
+    max-width:20%;
+    margin-left:4%;
     font-weight: var(--font-bold);
+    background-color: greenyellow;
+    
 }
-
 .navbar {
     margin-left: 8%;
     width: 100%;
@@ -237,7 +239,7 @@ hr {
                 {% for item in items %}
                 <div class="item">
                     <div class="top">
-                        <lable class="item_heading">{{item.name}}</lable>
+                        <a href="{% url 'recipes' item.name %}"><lable class="item_heading">{{item.name}}</lable></a>
                         <a href="{% url 'delete-item' item.id %}"> <img src="{% static 'images/delete icon medium.png' %}" alt="" class="delete_item_btn"></a>
                     </div>
                     <div class="bottom">
@@ -261,7 +263,7 @@ hr {
                     <br>
                     <lable class="expiryDate">Expiry Date</lable>
                     <br>
-                    <input type="date" id="expiry_date_input" name="expirydate" class="expiry_date_input">
+                    <input type="date" min="2022-01-20" id="expiry_date_input" name="expirydate" class="expiry_date_input">
                     <br>
                     <button type="submit" class="submit_btn">Add to Inventory</button>
                 </form>
