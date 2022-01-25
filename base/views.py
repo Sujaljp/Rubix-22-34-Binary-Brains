@@ -40,7 +40,7 @@ def sendMail():
 
 # Create your views here.
 def home(request):
-    #sendMail()
+    
     schedule.every().day.at("06:00").do(sendMail)
     schedule.run_pending()
     return render(request, 'base/index.html')
